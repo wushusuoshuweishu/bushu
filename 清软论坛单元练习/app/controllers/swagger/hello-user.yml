@@ -1,0 +1,12 @@
+definitions:
+  HelloUser:
+    type: object
+    properties:
+      message:
+        type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/HelloUser'
+    examples:
+      message: Hello world, 清小软

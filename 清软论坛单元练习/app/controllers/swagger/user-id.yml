@@ -1,0 +1,19 @@
+parameters:
+  - name: userId
+    in: path
+    type: string
+    required: true
+definitions:
+  UserInfo:
+    type: object
+    properties:
+      id:
+        type: integer
+      nickname:
+        type: string
+      created:
+        type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/UserInfo'

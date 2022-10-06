@@ -1,0 +1,25 @@
+parameters:
+  - name: username
+    in: body
+    type: string
+    required: true
+  - name: password
+    in: body
+    type: string
+    required: true
+definitions:
+  User:
+    type: object
+    properties:
+      username:
+        type: string
+      nickname:
+        type: string
+      userId:
+        type: integer
+      jwt:
+        type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/User'

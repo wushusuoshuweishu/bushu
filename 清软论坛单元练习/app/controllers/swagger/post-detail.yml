@@ -1,0 +1,48 @@
+parameters:
+  - name: postId
+    in: query
+    type: integer
+    required: true
+definitions:
+  Post:
+    type: object
+    properties:
+      id:
+        type: integer
+      userId:
+        type: integer
+      nickname:
+        type: string
+      title:
+        type: string
+      content:
+        type: string
+      lastRepliedTime:
+        type: string
+      created:
+        type: string
+      updated:
+        type: string
+      reply:
+        type: object
+        properties:
+          id:
+            type: integer
+          userId:
+            type: integer
+          nickname:
+            type: string
+          postId:
+            type: integer
+          replyId:
+            type: integer
+          content:
+            type: string
+          created:
+            type: string
+          updated:
+            type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/Post'

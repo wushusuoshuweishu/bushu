@@ -1,0 +1,55 @@
+parameters:
+  - name: page
+    in: query
+    type: integer
+    required: false
+  - name: size
+    in: query
+    type: integer
+    required: false
+  - name: userId
+    in: query
+    type: integer
+    required: false
+  - name: orderByReply
+    in: query
+    type: bool
+    required: false
+
+definitions:
+  Posts:
+    type: object
+    properties:
+      page:
+        type: integer
+      size:
+        type: integer
+      total:
+        type: integer
+      posts:
+        type: object
+        properties:
+          id:
+            type: integer
+          userId:
+            type: integer
+          nickname:
+            type: string
+          title:
+            type: string
+          content:
+            type: string
+          lastRepliedUserId:
+            type: integer
+          lastRepliedNickname:
+            type: string
+          lastRepliedTime:
+            type: string
+          created:
+            type: string
+          updated:
+            type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/Posts'

@@ -1,0 +1,35 @@
+parameters:
+  - name: username
+    in: body
+    type: string
+    required: true
+  - name: password
+    in: body
+    type: string
+    required: true
+  - name: nickname
+    in: body
+    type: string
+    required: true
+  - name: url
+    in: body
+    type: string
+    required: true
+  - name: magic_number
+    in: body
+    type: integer
+    required: false
+  - name: mobile
+    in: body
+    type: string
+    required: true
+definitions:
+  OkRegister:
+    type: object
+    properties:
+      message:
+        type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/OkRegister'

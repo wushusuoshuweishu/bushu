@@ -1,0 +1,23 @@
+parameters:
+  - name: title
+    in: body
+    type: string
+    required: false
+  - name: content
+    in: body
+    type: string
+    required: false
+  - name: postId
+    in: path
+    type: string
+    required: true
+definitions:
+  OkEditPost:
+    type: object
+    properties:
+      message:
+        type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/OkEditPost'

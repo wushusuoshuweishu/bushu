@@ -1,0 +1,21 @@
+parameters:
+  - name: title
+    in: body
+    type: string
+    required: true
+  - name: content
+    in: body
+    type: string
+    required: true
+definitions:
+  OkPost:
+    type: object
+    properties:
+      message:
+        type: string
+      postId:
+        type: integer
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/OkPost'

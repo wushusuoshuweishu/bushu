@@ -1,0 +1,22 @@
+definitions:
+  Profile:
+    type: object
+    properties:
+      id:
+        type: integer
+      username:
+        type: string
+      nickname:
+        type: string
+      url:
+        type: string
+      magic_number:
+        type: integer
+      mobile:
+        type: string
+      created:
+        type: string
+responses:
+  200:
+    schema:
+      $ref: '#/definitions/Profile'
